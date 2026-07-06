@@ -1,3 +1,11 @@
+# opencv-python
+# numpy
+# matplotlib
+# ultralytics
+# torch
+# torchvision
+# scikit-image
+# scipy
 opencv-python
 numpy
 matplotlib
@@ -6,3 +14,6 @@ torch
 torchvision
 scikit-image
 scipy
+fastapi
+uvicorn[standard]
+python-multipart
