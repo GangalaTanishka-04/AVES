@@ -1,36 +1,139 @@
-# AVES - Adaptive Vision Enhancement System
+# AVES – Adaptive Vision Enhancement System
 
-AVES enhances driving video for difficult visibility conditions, then overlays road-user detection, scene metrics, and warning signals for a judge-ready demo.
+AVES (Adaptive Vision Enhancement System) is an AI-powered application designed to improve driving visibility under challenging lighting conditions such as nighttime, low-light environments, and glare. The system enhances road scene visibility while providing object detection and scene analysis through an interactive web interface.
 
-## Run the FastAPI backend
+## Live Demo
 
-```powershell
-pip install -r requirements.txt
-python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+Frontend: https://aves-dashboard.vercel.app
+
+## Features
+
+- Image and video upload support
+- Low-light image enhancement
+- Real-time object detection
+- Scene analysis (brightness, contrast, glare, dark area)
+- Driver warning generation
+- RESTful backend APIs
+- Interactive React dashboard
+- Responsive user interface
+
+## Tech Stack
+
+### Frontend
+
+- React
+- JavaScript
+- HTML
+- CSS
+
+### Backend
+
+- FastAPI
+- Python
+- OpenCV
+
+### Tools
+
+- Git
+- GitHub
+- Vercel
+- Render
+
+---
+
+## Project Structure
+
+```
+AVES/
+│── frontend/
+│── backend/
+│── assets/
+│── README.md
 ```
 
-API docs open at `http://127.0.0.1:8000/docs`.
+---
 
-## Run the React dashboard
+## Installation
 
-```powershell
+### Clone the repository
+
+```bash
+git clone https://github.com/GangalaTanishka-04/AVES.git
+cd AVES
+```
+
+### Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/macOS
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+### Frontend Setup
+
+```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Dashboard opens at `http://127.0.0.1:5173` and connects to the API at `http://127.0.0.1:8000`.
+---
 
-## Demo flow
+## How It Works
 
-1. Start the backend.
-2. Start the dashboard.
-3. Choose the day or night sample.
-4. Click `Analyze Frame` for instant metrics and before/after output.
-5. Click `Process Video` to generate `output/enhanced.mp4` and `output/comparison.mp4`.
+1. The user uploads an image or video.
+2. The frontend sends the file to the FastAPI backend.
+3. OpenCV processes the media and performs scene enhancement.
+4. The backend analyzes the scene and detects road users.
+5. The processed results are returned through REST APIs.
+6. The React dashboard displays:
+   - Enhanced output
+   - Comparison view
+   - Scene metrics
+   - Object detection statistics
+   - Driver warnings
 
-The original CLI pipeline is still available with:
+---
 
-```powershell
-python main.py --cli
-```
+## Future Improvements
+
+- Real-time webcam processing
+- Live video streaming
+- Lane detection
+- Traffic sign recognition
+- Distance estimation
+- Model optimization for edge devices
+
+---
+
+## Contributors
+
+- Gangala Tanishka
+- Kurva Bhavya
+- Dhanashree chandekar
+- Amlina panigrahi
+- Shradhanjali das
+- Team AVES
+
+---
+
+## Author
+
+**Gangala Tanishka**
+
+GitHub: https://github.com/GangalaTanishka-04
+
+LinkedIn: https://www.linkedin.com/in/tanishka-gangala-61b19b323/
