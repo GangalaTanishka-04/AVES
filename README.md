@@ -6,6 +6,10 @@ AVES (Adaptive Vision Enhancement System) is an AI-powered application designed 
 
 Frontend: https://aves-dashboard.vercel.app
 
+Backend API: https://<your-render-service>.onrender.com
+
+> **Note:** The backend is hosted on Render's free tier. If it has been inactive, open the backend URL above once to wake up the service (30–60 seconds). After that, refresh the frontend to use the application.
+
 ## Features
 
 - Image and video upload support
